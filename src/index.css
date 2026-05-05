@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #000000;
+  --color-primary-dark: #050505;
+  --color-primary-light: #0a0a0a;
+  --color-secondary: #1C4D8D;
+  --color-accent: #4988C4;
+  --color-highlight: #BDE8F5;
+
+  --radius-xl: 12px;
+  --radius-2xl: 20px;
+
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-glow: glow 2s ease-in-out infinite alternate;
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+  }
+  @keyframes glow {
+    from { box-shadow: 0 0 5px #4988C4, 0 0 10px #4988C4; }
+    to { box-shadow: 0 0 20px #4988C4, 0 0 30px #4988C4; }
+  }
+}
+
+@layer base {
+  body {
+    @apply bg-primary text-white font-sans antialiased selection:bg-accent/30;
+  }
+}
+
+@layer components {
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  .glass-card {
+    @apply bg-white/5 backdrop-blur-lg border border-white/10 rounded-2xl;
+  }
+  
+  .btn-primary {
+    @apply px-6 py-3 bg-gradient-to-r from-secondary to-accent text-white font-medium rounded-xl transition-all duration-300 hover:shadow-lg hover:shadow-accent/30 hover:scale-105;
+  }
+  
+  .btn-secondary {
+    @apply px-6 py-3 border border-accent/50 text-white font-medium rounded-xl transition-all duration-300 hover:bg-accent/10 hover:border-accent;
+  }
+  
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-accent to-highlight;
+  }
+
+  .bg-black-gradient {
+    @apply bg-[radial-gradient(circle_at_top,_var(--color-primary-light)_0%,_var(--color-primary)_100%)];
+  }
+}
