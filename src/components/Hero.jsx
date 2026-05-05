@@ -52,9 +52,9 @@ const Hero = () => {
             <a href="#contact" className="btn-primary flex items-center gap-2">
               Got a project? <ArrowRight size={18} />
             </a>
-            <a href="/resume.pdf" className="btn-secondary flex items-center gap-2">
+            {/* <a href="/resume.pdf" className="btn-secondary flex items-center gap-2">
               My Resume <Download size={18} />
-            </a>
+            </a> */}
           </motion.div>
         </motion.div>
 
@@ -92,11 +92,22 @@ const Hero = () => {
             <motion.div 
               animate={{ y: [0, 20, 0] }}
               transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+              className="absolute -bottom -left-4 glass-card p-4 z-20"
+            >
+              <div className="text-2xl font-bold">550+</div>
+              <div className="text-xs text-white/60">Problem Solved</div>
+            </motion.div>  
+
+            <motion.div 
+              animate={{ y: [0, 20, 0] }}
+              transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
               className="absolute -bottom-4 -left-4 glass-card p-4 z-20"
             >
               <div className="text-2xl font-bold">15+</div>
               <div className="text-xs text-white/60">Projects</div>
             </motion.div>
+
+
           </div>
         </motion.div>
       </div>

@@ -1,10 +1,10 @@
 import profileImage from '../assets/profile_image.png';
 
 export const personalInfo = {
-  name: "Pankaj Barmon Nihal",
+  name: "Pankaj Nihal",
   title: "Software Engineer",
-  email: "pankoz.barmon1@gmail.com",
-  phone: "+8801521431458",
+  email: "p.b.nihalcse1@gmail.com",
+  phone: "+8801762361365",
   location: "Dhaka, Bangladesh",
   summary: "Software Engineer with 1+ year of professional experience. Strong in Python, Django REST Framework, FastAPI, and React.js. Skilled in REST API design, PostgreSQL, MySQL, and Firebase. Competitive programmer with 550+ problems solved.",
   profileImage: profileImage,
@@ -73,13 +73,25 @@ export const projects = [
   }
 ];
 
-export const skills = {
-  frontend: ["React.js", "Vue.js", "HTML", "CSS", "JavaScript", "jQuery", "Tailwind CSS", "Bootstrap"],
-  backend: ["Django", "Django REST Framework", "FastAPI", "Py4Web", "Web2py"],
-  databases: ["PostgreSQL", "MySQL", "Firebase Realtime DB"],
-  tools: ["Docker", "AWS (EC2, S3)", "CI/CD", "Firebase Auth", "RabbitMQ", "Git", "Postman"],
-  languages: ["Python", "JavaScript", "Java", "C++", "C"]
-};
+export const skills = [
+  // { name: "html", slug: "html" },
+  // { name: "css", slug: "css" },
+  { name: "django", slug: "django" },
+  { name: "fastapi", slug: "fastapi" },
+  { name: "reactjs", slug: "react" },  
+  { name: "postgresql", slug: "postgres" },
+  { name: "mysql", slug: "mysql" },
+  { name: "firebase", slug: "firebase" },
+  { name: "aws", slug: "aws" },
+  { name: "docker", slug: "docker" },
+  { name: "git", slug: "git" },
+  { name: "postman", slug: "postman" },
+  { name: "python", slug: "python" },
+  { name: "javascript", slug: "js" },
+  { name: "java", slug: "java" },
+  { name: "cpp", slug: "cpp" },
+  { name: "c", slug: "c" },
+];
 
 export const experience = [
   {
@@ -92,7 +104,7 @@ export const experience = [
   {
     title: "MSc in Computer Science & Engineering",
     company: "Jagannath University, Dhaka",
-    period: "2026 (Expected)",
+    period: "2026",
     description: "Focusing on advanced algorithms, data structures, and system design.",
   }
 ];

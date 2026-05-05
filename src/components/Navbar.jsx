@@ -29,7 +29,7 @@ const Navbar = () => {
           animate={{ opacity: 1, x: 0 }}
           className="text-2xl font-bold tracking-tight"
         >
-          <span className="text-white">Jensen</span>
+          <span className="text-white">Nihal</span>
           <span className="text-accent">.</span>
         </motion.div>
 

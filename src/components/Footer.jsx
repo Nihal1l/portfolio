@@ -13,7 +13,7 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center gap-8">
           <div>
             <div className="text-2xl font-bold mb-2">Nihal<span className="text-accent">.</span></div>
-            <p className="text-white/40 text-sm">© {new Date().getFullYear()} Pankaj Barmon Nihal. All rights reserved.</p>
+            <p className="text-white/40 text-sm">© {new Date().getFullYear()} Pankaj Nihal. All rights reserved.</p>
           </div>
 
           <div className="flex gap-6">

@@ -3,8 +3,8 @@ import { motion } from 'framer-motion';
 import { skills } from '../data/portfolioData';
 
 const TechStack = () => {
-  // Flatten categorized skills for the marquee
-  const allSkills = Object.values(skills).flat();
+  // Extract names from skills array
+  const allSkills = skills.map(s => s.name);
   const marqueeItems = [...allSkills, ...allSkills];
 
   return (

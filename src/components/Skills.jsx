@@ -4,42 +4,42 @@ import { skills } from '../data/portfolioData';
 
 const Skills = () => {
   return (
-    <section id="skills" className="py-24 relative">
+    <section id="skills" className="py-24 bg-black">
       <div className="container-custom">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-center mb-16"
-        >
-          <h2 className="text-4xl font-bold mb-4">Technical <span className="text-accent">Skills</span></h2>
-          <p className="text-white/40">My technical toolkit and expertise</p>
-        </motion.div>
+        {/* Section Title like the image */}
+        <div className="flex items-center gap-4 mb-16">
+          {/* <h2 className="text-3xl font-mono flex items-center">
+            <span className="text-accent mr-1">#</span>
+            <span className="text-white">Technologies and skills</span>
+          </h2> */}
+          <h2 className="text-4xl font-bold mb-4">Technologies & <span className="text-accent">Skills</span></h2>
+          <div className="h-[1px] flex-1 bg-gradient-to-r from-accent/50 to-transparent" />
+        </div>
 
-        <div className="space-y-12">
-          {Object.entries(skills).map(([category, skillList], categoryIndex) => (
-            <div key={category} className="space-y-6">
-              <h3 className="text-2xl font-bold capitalize text-white/80 border-l-4 border-accent pl-4">
-                {category}
-              </h3>
-              <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
-                {skillList.map((skill, index) => (
-                  <motion.div
-                    key={index}
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    transition={{ delay: index * 0.03 }}
-                    viewport={{ once: true }}
-                    className="glass-card p-4 flex items-center justify-center gap-3 hover:border-accent/50 hover:shadow-md hover:shadow-accent/5 transition-all duration-300 group"
-                  >
-                    <div className="w-8 h-8 rounded-full bg-accent/10 flex items-center justify-center group-hover:bg-accent/20 transition-colors shrink-0">
-                      <span className="text-accent font-bold text-sm">{skill[0]}</span>
-                    </div>
-                    <span className="font-medium text-white/70 text-sm whitespace-nowrap">{skill}</span>
-                  </motion.div>
-                ))}
+        {/* Skills Grid */}
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8">
+          {skills.map((skill, index) => (
+            <motion.div
+              key={skill.name}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: index * 0.1 }}
+              viewport={{ once: true }}
+              className="flex flex-col items-center group"
+            >
+              {/* Square Box with Border */}
+              <div className="w-28 h-28 border border-white/20 flex items-center justify-center mb-3 group-hover:border-accent/50 transition-colors duration-300">
+                <img 
+                  src={`https://skillicons.dev/icons?i=${skill.slug}`} 
+                  alt={skill.name}
+                  className="w-14 h-14 object-contain"
+                />
               </div>
-            </div>
+              {/* Label */}
+              <span className="text-white/60 font-mono text-sm tracking-tighter group-hover:text-white transition-colors">
+                {skill.name}
+              </span>
+            </motion.div>
           ))}
         </div>
       </div>
