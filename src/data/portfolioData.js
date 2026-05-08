@@ -104,7 +104,7 @@ export const experience = [
   {
     title: "MSc in Computer Science & Engineering",
     company: "Jagannath University, Dhaka",
-    period: "2026",
+    period: "",
     description: "Focusing on advanced algorithms, data structures, and system design.",
   }
 ];
