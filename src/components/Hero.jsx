@@ -52,9 +52,9 @@ const Hero = () => {
             <a href="#contact" className="btn-primary flex items-center gap-2">
               Got a project? <ArrowRight size={18} />
             </a>
-            {/* <a href="/resume.pdf" className="btn-secondary flex items-center gap-2">
+            <a href="/resume.pdf" className="btn-secondary flex items-center gap-2">
               My Resume <Download size={18} />
-            </a> */}
+            </a> 
           </motion.div>
         </motion.div>
 
